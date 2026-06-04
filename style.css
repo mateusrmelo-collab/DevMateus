@@ -914,19 +914,35 @@ body {
     overflow-y: auto;
   }
 
-  .start-menu {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 80px;
-  }
-
   .taskbar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
   }
+
+  .start-menu {
+    position: fixed;
+
+    left: 50%;
+    bottom: 75px;
+
+    width: 92vw;
+    max-width: 420px;
+    max-height: 70vh;
+
+    transform: translateX(-50%) !important;
+
+    overflow: visible;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .start-menu.active {
+    display: flex;
+  }
 }
+
 
 .main-container {
   padding-bottom: 90px;
