@@ -13,15 +13,19 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+
   background: url("wall.png") no-repeat center center fixed;
-  backdrop-filter: brightness(0.9);
   background-size: cover;
-  overflow: hidden;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
   display: flex;
   flex-direction: column;
 }
+
 
 .desktop-icons {
   position: absolute;
@@ -516,7 +520,7 @@ body {
 
 .start-menu {
   position: fixed;
-  bottom: 50px;
+  bottom: 54px;
   left: 0px;
   z-index: 1;
   overflow: visible;
@@ -695,6 +699,7 @@ body {
 
 @media (max-width: 900px) {
   body {
+    overflow-x: hidden;
     overflow-y: auto;
   }
 
@@ -900,4 +905,29 @@ body {
   .link-info small {
     font-size: 10px;
   }
+}
+
+@media (max-width: 600px) {
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .start-menu {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+  }
+
+  .taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.main-container {
+  padding-bottom: 90px;
 }
