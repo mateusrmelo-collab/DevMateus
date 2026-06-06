@@ -13,8 +13,8 @@
 }
 
 body {
-  min-height: 100vh;
-  width: 100vw;
+  min-height: 100dvh;
+  width: 100dvw;
   background: url("wall.png") no-repeat center center fixed;
   background-size: cover;
 
