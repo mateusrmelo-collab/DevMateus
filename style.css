@@ -66,6 +66,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 20px;
   width: 500px;
+  height: auto;
   padding: 40px 30px;
   text-align: center;
 }
@@ -962,6 +963,7 @@ body {
 @media (max-width: 480px) {
   .profile-card {
     padding: 25px 15px;
+    max-width: 500px;
   }
 
   .social-link {
@@ -985,7 +987,7 @@ body {
 
   body {
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
   }
 
   .taskbar {
