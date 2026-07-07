@@ -15,10 +15,12 @@
         <span>Sobre Mim</span>
       </div>
 
+
       <div class="icon-item" id="projectsBtn">
         <img src="explorer.ico" />
         <span>Projetos</span>
       </div>
+
 
       <div class="icon-item" id="socialBtn">
         <img src="vista_messenger.ico" />
@@ -37,6 +39,7 @@
         <h1>Mateus Rodrigues</h1>
         <p>Web Developer</p>
 
+
         <a href="https://github.com/mateusrmelo-collab" class="social-link">
           <i class="fa-brands fa-github" style="color: black"></i>
           <div class="link-info">
@@ -45,6 +48,7 @@
           </div>
         </a>
 
+
         <a href="https://www.instagram.com/im_still_alive63/" class="social-link">
           <i class="fa-brands fa-instagram" style="color: rgb(255, 0, 230)"></i>
           <div class="link-info">
@@ -52,6 +56,7 @@
             <small>@mateusrmelo.dev</small>
           </div>
         </a>
+
 
         <a href="#" class="social-link">
           <i class="fa-brands fa-linkedin" style="color: #2054e4"></i>
@@ -63,12 +68,14 @@
       </div>
     </div>
 
+
     <div class="sidebar" id="sidebar">
       <div class="gadget weather">
         <div></div>
         <div style="text-align: right"></div>
       </div>
     </div>
+
 
     <div class="taskbar">
       <div class="start-button">
@@ -93,74 +100,95 @@
       </div>
     </div>
 
+
     <div class="start-menu" id="startMenu">
 
+
   <div class="start-left">
+
 
     <div class="start-user">
       <img src="download20260500235506.png" />
       <span>Mateus Rodrigues</span>
     </div>
 
+
     <div class="start-section-title">Fixados</div>
+
 
     <div class="start-item">
       <img height="25" width="25" src="vista_pc_1.ico" alt="">
       Sobre Mim
     </div>
 
+
     <div class="start-item">
       <img height="25" width="25" src="explorer.ico" alt="">
       Projetos
     </div>
+
 
     <div class="start-item">
       <img height="25" width="25" src="vista_messenger.ico" alt="">
       Redes sociais
     </div>
 
+
     <div class="start-section-title">Sistema</div>
+
 
     <div class="start-item">
       <i class="fa-solid fa-gear"></i>
       Configurações
     </div>
 
+
   </div>
 
+
   <div class="start-right">
+
 
     <div class="start-profile-pic">
       <img src="download20260500235506.png" />
     </div>
+
 
     <div class="start-item right">
       <i class="fa-brands fa-github"></i>
       <a href="https://github.com/mateusrmelo-collab">Github</a>
     </div>
 
+
     <div class="start-item right">
       <i class="fa-brands fa-instagram"></i>
       <a href="https://www.instagram.com/im_still_alive63/">Instagram</a>
     </div>
+
 
     <div class="start-item right">
       <i class="fa-brands fa-linkedin"></i>
       <a href="#">LinkedIn</a>
     </div>
 
+
     <div class="start-divider"></div>
+
 
     <div class="start-item right power">
       <i class="fa-solid fa-power-off"></i>
       Desligar
     </div>
 
+
   </div>
 
+
 </div>
+
     <script>
       const sidebar = document.getElementById("sidebar");
+
 
       document.querySelectorAll(".icon-item").forEach((icon) => {
         icon.addEventListener("click", () => {
@@ -168,14 +196,17 @@
         });
       });
 
+
       document.addEventListener("click", (e) => {
         const clickedIcon = e.target.closest(".icon-item");
+
 
         if (!sidebar.contains(e.target) && !clickedIcon) {
           sidebar.classList.remove("active");
         }
       });
     </script>
+
 
     <script>
       projectsBtn.onclick = () => {
@@ -190,15 +221,21 @@
                 <p>
                     Meu primeiro sistema completo de cadastro
                 </p>
-                <button>Abrir Projeto</button>
+                <a href="https://github.com/mateusrmelo-collab" target="_blank" rel="noopener noreferrer" class="project-btn">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    Abrir Projeto
+                </a>
             </div>
 
             <div class="project-card">
-                <h3>Chess<h3>
+                <h3>Chess</h3>
                 <p>
                     Xadrez baseado nas regras oficiais
                 </p>
-                <button>Abrir Projeto</button>
+                <a href="https://mateusrmelo-collab.github.io/Chess/" target="_blank" rel="noopener noreferrer" class="project-btn">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    Abrir Projeto
+                </a>
             </div>
 
             <div class="project-card">
@@ -206,7 +243,10 @@
                 <p>
                     Recriação do windows xp
                 </p>
-                <button>Abrir Projeto</button>
+                <a href="https://mateusrmelo-collab.github.io/MateusxpV1" target="_blank" rel="noopener noreferrer" class="project-btn">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    Abrir Projeto
+                </a>
             </div>
 
             <div class="project-card">
@@ -214,7 +254,10 @@
                 <p>
                     Créditos com música
                 </p>
-                <button>Abrir Projeto</button>
+                <a href="https://mateusrmelo-collab.github.io/Tentativa-de-creditos" target="_blank" rel="noopener noreferrer" class="project-btn">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    Abrir Projeto
+                </a>
             </div>
 
         </div>
@@ -222,6 +265,7 @@
     </div>
 
     `;
+
 
         sidebar.classList.add("active");
       };
@@ -250,16 +294,19 @@
                 Mateus Rodrigues
             </h3>
 
+
             <p style="margin-top:15px; line-height:1.7;">
                 Sou um desenvolvedor em formação apaixonado por tecnologia e
                 programação, criando projetos reais para desenvolver habilidades
-                práticas e melhorar minha lógica de programação 
+                práticas e melhorar minha lógica de programação
             </p>
+
 
             <p style="margin-top:10px; line-height:1.7;">
                 Meu objetivo é evoluir continuamente como desenvolvedor e
                 contribuir para projetos cada vez mais desafiadores.
             </p>
+
 
             <div class="skills">
 
@@ -290,14 +337,17 @@
     <span><i class="devicon-python-plain colored"></i> Python</span>
 
     <span><i class="devicon-react-plain colored"></i> React</span>
-    
+
+
             </div>
+
 
         </div>
 
     </div>
 
     `;
+
 
         sidebar.classList.add("active");
       };
@@ -315,19 +365,24 @@
                 GitHub
             </h3>
 
+
             <p>
                 Meus projetos e estudos.
             </p>
 
+
             <a
                 href="https://github.com/mateusrmelo-collab"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="social-button"
             >
                 Abrir GitHub
             </a>
 
+
         </div>
+
 
         <div class="social-card">
 
@@ -336,18 +391,24 @@
                 Instagram
             </h3>
 
+
             <p>
                 Conteúdo pessoal e desenvolvimento.
             </p>
 
+
             <a
                 href="https://www.instagram.com/im_still_alive63/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="social-button"
             >
                 Abrir Instagram
             </a>
 
+
         </div>
+
 
         <div class="social-card">
 
@@ -356,9 +417,11 @@
                 Linkedin
             </h3>
 
+
             <p>
                 Projetos e experiências.
             </p>
+
 
             <a
                 href="#"
@@ -367,26 +430,34 @@
                 Abrir Linkedin
             </a>
 
+
         </div>
+
 
     </div>
 
     `;
 
+
         sidebar.classList.add("active");
       };
     </script>
 
+
     <script>
       const startButton = document.querySelector(".start-button");
 
+
       const startMenu = document.getElementById("startMenu");
+
 
       startButton.addEventListener("click", (e) => {
         e.stopPropagation();
 
+
         startMenu.classList.toggle("active");
       });
+
 
       document.addEventListener("click", (e) => {
         if (!startMenu.contains(e.target)) {
@@ -394,26 +465,31 @@
         }
       });
     </script>
+
     <script>
     function updateClock() {
     const now = new Date();
 
+
     const hours = String(now.getHours()).padStart(2, "0");
     const minutes = String(now.getMinutes()).padStart(2, "0");
+
 
     const day = String(now.getDate()).padStart(2, "0");
     const month = String(now.getMonth() + 1).padStart(2, "0");
     const year = now.getFullYear();
 
+
     document.getElementById("clock").textContent =
         `${hours}:${minutes}`;
 
+
     document.getElementById("date").textContent =
         `${day}/${month}/${year}`;}
-        
+
         updateClock();
         setInterval(updateClock, 1000);
         </script>
-
-  </body>
+</body>
 </html>
+
