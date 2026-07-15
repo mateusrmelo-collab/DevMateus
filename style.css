@@ -41,7 +41,7 @@ button {
 body {
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: url("wall.png") no-repeat center center fixed;
+  background: url("assets/wall.png") no-repeat center center fixed;
   background-size: cover;
   user-select: none;
 }

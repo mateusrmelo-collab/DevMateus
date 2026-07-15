@@ -24,12 +24,12 @@ const icons = {
 };
 
 const appIconImages = {
-  about: 'vista_pc_1.ico',
-  projects: 'explorer.ico',
-  social: 'vista_messenger.ico',
-  vscode: 'vs-removebg-preview.png',
-  cmd: 'cmd-removebg-preview.png',
-  trash: 'trash-icon.png'
+  about: 'assets/vista_pc_1.ico',
+  projects: 'assets/explorer.ico',
+  social: 'assets/vista_messenger.ico',
+  vscode: 'assets/vs-removebg-preview.png',
+  cmd: 'assets/cmd-removebg-preview.png',
+  trash: 'assets/trash-icon.png'
 };
 
 const apps = {
@@ -44,7 +44,7 @@ const apps = {
           <div class="header-left-box">
             <div class="profile-avatar-frame">
 
-              <img src="download20260500235506.png" alt="Mateus Rodrigues" class="profile-avatar-img"></span>
+              <img src="assets/download20260500235506.png" alt="Mateus Rodrigues" class="profile-avatar-img"></span>
             </div>
             <div class="gamertag-tag">
               <i class="fa-brands fa-xbox"></i> MATEUS_DEV
@@ -383,7 +383,7 @@ const apps = {
               <article class="myspace-comment-item">
                 <div class="comment-author-img">
 
-                  <img src="download.jpg" alt="Dev_Alex2004" class="comment-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+                  <img src="assets/download.jpg" alt="Dev_Alex2004" class="comment-avatar-img">
                   <div class="avatar-circle dev-alex" style="display:none"><i class="fa-solid fa-user-astronaut"></i></div>
                   <span class="author-name">Dev_Alex2004</span>
                 </div>
@@ -396,7 +396,7 @@ const apps = {
               <article class="myspace-comment-item">
                 <div class="comment-author-img">
 
-                  <img src="images.jpg" alt="SkateAndCode" class="comment-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+                  <img src="assets/images.jpg" alt="SkateAndCode" class="comment-avatar-img">
                   <div class="avatar-circle dev-skate" style="display:none"><i class="fa-solid fa-person-skating"></i></div>
                   <span class="author-name">SkateAndCode</span>
                 </div>
@@ -409,7 +409,7 @@ const apps = {
               <article class="myspace-comment-item">
                 <div class="comment-author-img">
 
-                  <img src="xbox.jpg" alt="RetroSetup_BR" class="comment-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+                  <img src="assets/xbox.jpg" alt="RetroSetup_BR" class="comment-avatar-img">
                   <div class="avatar-circle dev-retro" style="display:none"><i class="fa-brands fa-xbox"></i></div>
                   <span class="author-name">RetroSetup_BR</span>
                 </div>
