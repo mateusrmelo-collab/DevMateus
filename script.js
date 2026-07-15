@@ -129,7 +129,7 @@ const apps = {
               </div>
               <div class="gamer-sum-grid">
                 <div class="g-stat"><strong>Especialidade:</strong> Full-Stack Development & Jogos em JS</div>
-                <div class="g-stat"><strong>Ambiente Principal:</strong> VS Code + Git / Linux CMD</div>
+                <div class="g-stat"><strong>Ambiente Principal:</strong> VS Code + Git / CMD</div>
                 <div class="g-stat"><strong>Filosofia:</strong> Clean Code, Componentização & Performance</div>
                 <div class="g-stat"><strong>Status Atual:</strong> Criando projetos abertos e colaborando no GitHub</div>
               </div>
