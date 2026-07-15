@@ -82,7 +82,7 @@ const apps = {
           <div class="tab-pane active" id="ob-tab-overview">
             <div class="myspace-about-card">
               <h3><i class="fa-solid fa-address-card"></i> Sobre Mim // A Filosofia de Desenvolvimento</h3>
-              <p>E aí! Sou o Mateus, desenvolvedor web apaixonado por transformar ideias complexas em interfaces rápidas, intuitivas e limpas. Minha jornada na tecnologia começou cedo: testando configurações no auge dos monitores CRT, jogando clássicos no Xbox e explorando como a web funcionava por baixo dos panos. Essa vivência prática moldou minha forma de programar hoje: foco em performance, respeito pelas bases da programação, curiosidade para resolver bugs difíceis e um design que tenha identidade de verdade.</p>
+              <p>Olá mundo! Sou o Mateus, desenvolvedor web apaixonado por transformar ideias complexas em interfaces rápidas, intuitivas e limpas. Minha jornada na tecnologia começou cedo: jogando clássicos no Xbox e explorando como a web funcionava por baixo dos panos. Essa vivência prática moldou minha forma de programar hoje: foco em performance, respeito pelas bases da programação, curiosidade para resolver bugs difíceis e um design que tenha identidade de verdade.</p>
             </div>
 
             <div class="overview-grid">
