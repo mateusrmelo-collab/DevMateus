@@ -138,8 +138,8 @@ const apps = {
 
           <div class="tab-pane" id="ob-tab-top8">
             <div class="myspace-section-header">
-              <h3><i class="fa-solid fa-microchip"></i> Tech Stack & Arsenal Técnico — O Top 8 do Perfil</h3>
-              <p>Aqui estão todas as linguagens, bibliotecas, bancos de dados e ferramentas de desenvolvimento e design 3D do meu fluxo de trabalho (tudo reunido no clássico formato do Top 8 do MySpace):</p>
+              <h3><i class="fa-solid fa-microchip"></i> Tech Stack & Arsenal Técnico</h3>
+              <p>Aqui estão todas as linguagens, bibliotecas, bancos de dados e ferramentas de desenvolvimento e design 3D do meu fluxo de trabalho:</p>
             </div>
 
             <div class="stack-icons-banner">
