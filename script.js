@@ -733,6 +733,9 @@ function openApp(appId) {
   if (appId === 'cmd') initializeCmd(win);
   if (appId === 'vscode') initializeVsCode(win);
   if (appId === 'trash') initializeTrash(win);
+  if (appId === "projects") {unlockAchievement("explorer");}
+  if (appId === "social") {unlockAchievement("social");}
+  if(appId === "about"){unlockAchievement("about");}
   startMenu.classList.remove('active');
 }
 
@@ -835,16 +838,38 @@ function initializeCmd(win) {
       date: new Date().toLocaleString('pt-BR'),
       whoami: 'mateus-rodrigues\\web-developer // online'
     };
-    if (command === 'clear' || command === 'cls') output.innerHTML = '';
-    else if (command.startsWith('echo ')) output.textContent += raw.slice(5) + '\n';
+    if (command === 'clear' || command === 'cls') {
+      output.innerHTML = '';
+    }
+    else if (command.startsWith('echo ')) {
+      output.textContent += raw.slice(5) + '\n';
+    }
+    else if (command === 'sudo rm -rf /') {
+      output.textContent +=
+      `rm: removendo '/'...
+ERRO CRÍTICO!
+      
+Boa tentativa`;
+      unlockAchievement("secret");
+    }
+
     else if (commands[command]) {
       output.textContent += commands[command] + '\n';
-      if (['about', 'projects', 'social', 'vscode'].includes(command)) openApp(command);
-    } else if (command) output.textContent += `'${raw}' não é reconhecido como um comando interno ou externo.\n`;
+
+      if (['about', 'projects', 'social', 'vscode'].includes(command)) {
+        openApp(command);
+      }
+    }
+
+    else if (command) {
+      output.textContent += `'${raw}' não é reconhecido como um comando interno ou externo.\n`;
+    }
+
     input.value = '';
     body.scrollTop = body.scrollHeight;
   });
   setTimeout(() => input.focus(), 0);
+  unlockAchievement("hacker");
 }
 
 function escapeHtml(value) {
@@ -867,6 +892,7 @@ function initializeVsCode(win) {
   win.querySelectorAll('[data-file]').forEach(fileEl => {
     fileEl.addEventListener('click', () => updateTab(fileEl.dataset.file));
   });
+  unlockAchievement("vscode");
 }
 
 function initializeTrash(win) {
@@ -876,6 +902,7 @@ function initializeTrash(win) {
       alert('A Lixeira já está limpa e otimizada!');
     });
   }
+  unlockAchievement("trash");
 }
 
 const isTouchLayout = () => window.matchMedia('(pointer: coarse), (max-width: 700px)').matches;
@@ -953,3 +980,107 @@ document.getElementById('turnOnButton').addEventListener('click', () => {
   shutdownScreen.classList.remove('active', 'ready');
   shutdownScreen.setAttribute('aria-hidden', 'true');
 });
+
+const achievements = {
+
+    welcome:{
+        title:"Bem-vindo!",
+        desc:"Obrigado por visitar meu portfólio.",
+        score:"+10G",
+        gif:"assets/3dgifmaker23100.gif"
+    },
+
+    explorer:{
+        title:"Explorador",
+        desc:"Você abriu a pasta Projetos.",
+        score:"+20G",
+        gif:"assets/3dgifmaker40520.gif"
+    },
+
+    hacker:{
+        title:"Hacker",
+        desc:"Prompt de Comando desbloqueado.",
+        score:"+30G",
+        gif:"assets/3dgifmaker75237.gif"
+    },
+
+    vscode:{
+        title:"Code Master",
+        desc:"Visual Studio Code aberto.",
+        score:"+25G",
+        gif:"assets/3dgifmaker25700.gif"
+    },
+
+    social:{
+        title:"Social",
+        desc:"Visitou minhas redes sociais.",
+        score:"+15G",
+        gif:"assets/3dgifmaker64058.gif"
+    },
+
+    trash:{
+        title:"Lixeira",
+        desc:"Até a lixeira foi explorada.",
+        score:"+5G",
+        gif:"assets/3dgifmaker09885.gif"
+    },
+
+    secret:{
+        title:"???",
+        desc:"Você encontrou um easter egg.",
+        score:"+100G",
+        gif:"assets/3dgifmaker39776.gif"
+    },
+    
+    about:{
+      title:"Conhecendo o Dev",
+      desc:"Você abriu o perfil do Mateus.",
+      score:"+15G",
+      gif:"assets/3dgifmaker64878.gif"
+    }
+};
+
+function unlockAchievement(id){
+
+    if(localStorage.getItem("achievement_" + id)) return;
+
+    localStorage.setItem("achievement_" + id, "true");
+
+    const data = achievements[id];
+    if(!data) return;
+
+    const container = document.getElementById("achievement-container");
+
+    const div = document.createElement("div");
+    div.className = "achievement";
+
+    div.innerHTML = `
+        <img src="${data.gif}">
+        <div class="achievement-info">
+            <span class="achievement-title">Achievement Unlocked</span>
+            <span class="achievement-name">${data.title}</span>
+            <span class="achievement-desc">${data.desc}</span>
+            <span class="achievement-score">${data.score}</span>
+        </div>
+    `;
+
+    container.appendChild(div);
+
+    requestAnimationFrame(() => div.classList.add("show"));
+
+    setTimeout(() => {
+        div.classList.remove("show");
+        div.classList.add("hide");
+
+        setTimeout(() => div.remove(), 500);
+    }, 5000);
+  }
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+        unlockAchievement("welcome");
+    }, 1000);
+
+});
+

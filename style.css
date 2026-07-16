@@ -1935,6 +1935,82 @@ body {
   border-radius: 7px;
 }
 
+#achievement-container{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:999999;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    pointer-events:none;
+}
+
+.achievement{
+    width:360px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px;
+    color:#fff;
+    background:linear-gradient(180deg,#2d4f81,#1f3558);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:12px;
+    backdrop-filter:blur(8px);
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.45);
+    transform:translateX(450px);
+    opacity:0;
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1),
+        opacity .45s;
+}
+
+.achievement.show{
+    transform:translateX(0);
+    opacity:1;
+}
+
+.achievement.hide{
+    transform:translateX(450px);
+    opacity:0;
+}
+
+.achievement img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.achievement-info{
+    display:flex;
+    flex-direction:column;
+}
+
+.achievement-title{
+    font-size:.72rem;
+    color:#a6d7ff;
+    font-weight:bold;
+}
+
+.achievement-name{
+    font-size:1rem;
+    font-weight:700;
+    margin:2px 0;
+}
+
+.achievement-desc{
+    font-size:.82rem;
+    opacity:.8;
+}
+
+.achievement-score{
+    margin-top:6px;
+    color:#ffdc5f;
+    font-weight:bold;
+}
+
 @media (max-width: 700px) {
   :root {
     --taskbar-height: 62px;
@@ -2172,5 +2248,19 @@ body {
   .system-tray > .fa-wifi,
   .system-tray > .fa-volume-high {
     display: none;
+  }
+
+  #achievement-container{
+    top: auto;
+    bottom: 75px; 
+    right: 50%;
+    transform: translateX(50%);
+    width: calc(100% - 20px);
+    align-items: center;
+  }
+
+  achievement{
+    width: 100%;
+    max-width: 360px;
   }
 }
