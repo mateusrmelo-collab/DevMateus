@@ -438,7 +438,7 @@ const apps = {
       <div class="project-list">
         ${project('Sistema de Escola em PHP', 'Meu primeiro sistema completo de cadastro, autenticação e gestão de alunos.', 'https://github.com/mateusrmelo-collab')}
         ${project('Chess // Jogo de Xadrez JS', 'Recriação interativa de Xadrez baseado nas regras oficiais e validação de movimentos.', 'https://mateusrmelo-collab.github.io/Chess/')}
-        ${project('MateusXP (Versão 1)', 'Recriação nostálgica do Windows XP direto no navegador com menus e janelas operacionais.', 'https://mateusrmelo-collab.github.io/MateusxpV1')}
+        ${project('Pixelforge', 'Site de pixel arte baseado em estéticas dos anos 2000', 'https://mateusrmelo-collab.github.io/Pixelforge/')}
         ${project('Créditos & Trilha Sonora', 'Experiência audiovisual com música de fundo e rolagem de créditos interativa.', 'https://mateusrmelo-collab.github.io/Tentativa-de-creditos')}
       </div>`
   },
