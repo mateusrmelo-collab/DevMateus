@@ -436,7 +436,7 @@ const apps = {
         <button type="button"><i class="fa-solid fa-list"></i> Exibições</button>
       </div>
       <div class="project-list">
-        ${project('Sistema de Escola em PHP', 'Meu primeiro sistema completo de cadastro, autenticação e gestão de alunos.', 'https://github.com/mateusrmelo-collab')}
+        ${project('Sistema em PHP', 'Meu primeiro sistema completo.', 'https://apertureweb.42web.io/')}
         ${project('Chess // Jogo de Xadrez JS', 'Recriação interativa de Xadrez baseado nas regras oficiais e validação de movimentos.', 'https://mateusrmelo-collab.github.io/Chess/')}
         ${project('Pixelforge', 'Site de pixel arte baseado em estéticas dos anos 2000', 'https://mateusrmelo-collab.github.io/Pixelforge/')}
         ${project('Créditos & Trilha Sonora', 'Experiência audiovisual com música de fundo e rolagem de créditos interativa.', 'https://mateusrmelo-collab.github.io/Tentativa-de-creditos')}
